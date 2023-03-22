@@ -1,0 +1,5 @@
+1. HTML (Imagenes)
+https://randomfox.ca/images/2.jpg
+
+2. imagenes html -> js
+3. Eventos - DOM
