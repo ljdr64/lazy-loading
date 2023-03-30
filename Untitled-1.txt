@@ -1,0 +1,8 @@
+1. HTML (Imagenes)
+https://randomfox.ca/images/2.jpg
+2. imagenes html -> JS
+2.1 imagenes aleatorias
+3. Eventos - DOM -> agregar imagenes
+
+4. Intersection Observer
+5. Aplicar el lazy loading imgs
