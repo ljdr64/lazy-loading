@@ -9,6 +9,8 @@ const loadImage = (entry) => {
     const url = imagen.dataset.src;
     // load image
     imagen.src = url;
+    loadedImages++;
+    printLog();
 
     // des registra la imagen (unlisten)
     observer.unobserve(container);
@@ -23,5 +25,5 @@ const observer = new IntersectionObserver((entries) => {
 //
 export const registerImage = (imagen) => {
   // IntersectactionObservador -> observer(imagen)
-  observer.observe(imagen)
+  observer.observe(imagen);
 }
