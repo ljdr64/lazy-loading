@@ -10,12 +10,12 @@ const random = () => Math.floor(Math.random() * (maximum - minimum)) + minimum;
 const createImageNode = () => {
     const container = document.createElement("div");
     container.className = "p-4";
+    container.id="fox-image";
 
     const imagen = document.createElement("img");
-    imagen.className = "mx-auto";
+    imagen.className = "mx-auto bg-gray-500 rounded";
     imagen.width="320";
-    imagen.dataset.src=`https://randomfox.ca/images/${random()}.jpg`;
-    imagen.alt="";
+    imagen.dataset.src=`https://randomfox.ca/images/${random()}.jpg`;  
 
     container.appendChild(imagen);
 
@@ -25,13 +25,25 @@ const createImageNode = () => {
 const nuevaImagen = createImageNode();
 const mountNode = document.getElementById("images");
 
-const addButton = document.querySelector('button');
+const addButton = document.querySelector('#add-img');
+const rmButton = document.querySelector('#rm-img');
 
 //
 const addImage = () => {
     const newImage = createImageNode();
     mountNode.append(newImage);
     registerImage(newImage);
+    appendedImages++;    
+    printLog();
 }
 
+const rmAllImages = () => {
+    const foxImages = document.querySelectorAll('#fox-image');
+    [...foxImages].map((value) => value.remove());
+    appendedImages = 0;
+    loadedImages = 0;
+    printLog();    
+}
+
+rmButton.addEventListener("click", rmAllImages);
 addButton.addEventListener("click", addImage);
