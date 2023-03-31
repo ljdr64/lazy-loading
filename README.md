@@ -2,6 +2,8 @@
 
 Nuestro propio plugin Lazy Loading. Proyecto del Curso de Manipulación del DOM de Platzi.
 
+![Lazy Loading 2](https://user-images.githubusercontent.com/77581853/228994460-0cd0d6f7-d0c6-4ff7-87c0-a2bb82d1ab4f.jpg)
+
 ## Available Scripts
 
 ### npm start
